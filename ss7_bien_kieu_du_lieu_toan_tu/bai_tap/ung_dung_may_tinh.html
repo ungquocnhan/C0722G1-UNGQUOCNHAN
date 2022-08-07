@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr {
+            width: 400px;
+        }
+
+        .exam2 {
+            width: 100px;
+        }
+
+        .exam3 {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="nhapsothu1" class="exam3"></td>
+            <td colspan="2"><input type="number" id="nhapsothu2" class="exam3"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Addition(+)" onclick="phepcong()" class="exam2"></td>
+            <td><input type="button" value="Subtraction(-)" onclick="pheptru()" class="exam2"></td>
+            <td><input type="button" value="Multiplication(*)" onclick="phepnhan()" class="exam2"></td>
+            <td><input type="button" value="Division(/)" onclick="phepchia()" class="exam2"></td>
+        </tr>
+    </table>
+    <p id="Display">Hiển thị</p>
+</form>
+
+</body>
+<script>
+    function phepcong() {
+        let sothu1 = document.getElementById("nhapsothu1").value;
+        let sothu2 = document.getElementById("nhapsothu2").value;
+        const a = parseInt(sothu1);
+        const b = parseInt(sothu2);
+        let phepcong = a + b;
+        document.getElementById("Display").innerHTML = 'Result Addition :' + phepcong;
+    }
+
+    function pheptru() {
+        let sothu1 = document.getElementById("nhapsothu1").value;
+        let sothu2 = document.getElementById("nhapsothu2").value;
+        const a = parseInt(sothu1);
+        const b = parseInt(sothu2);
+        let pheptru = a - b;
+        document.getElementById("Display").innerHTML = 'Result Addition :' + pheptru;
+    }
+
+    function phepnhan() {
+        let sothu1 = document.getElementById("nhapsothu1").value;
+        let sothu2 = document.getElementById("nhapsothu2").value;
+        const a = parseInt(sothu1);
+        const b = parseInt(sothu2);
+        let phepnhan = a * b;
+        document.getElementById("Display").innerHTML = 'Result Addition :' + phepnhan;
+    }
+
+    function phepchia() {
+        let sothu1 = document.getElementById("nhapsothu1").value;
+        let sothu2 = document.getElementById("nhapsothu2").value;
+        const a = parseInt(sothu1);
+        const b = parseInt(sothu2);
+        let phepchia = a / b;
+        document.getElementById("Display").innerHTML = 'Result Addition :' + phepchia;
+    }
+
+
+</script>
+</html>
