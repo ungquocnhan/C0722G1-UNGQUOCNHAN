@@ -25,7 +25,7 @@
             <td>
                 <select id="chonpheptinh" class="exam3">
                     <option value="+">+</option>
-                    <option value="_">-</option>
+                    <option value="-">-</option>
                     <option value="*">*</option>
                     <option value="/">/</option>
                 </select>
@@ -46,18 +46,17 @@
         let sothu1 = document.getElementById("nhapsothu1").value;
         let sothu2 = document.getElementById("nhapsothu2").value;
         let chondau = document.getElementById("chonpheptinh").value;
-        let cong = chondau.options.text;
-        let a = parseInt(sothu1);
-        let b = parseInt(sothu2);
-        const phepcong = a + b;
-        const pheptru = a - b;
-        const phepnhan = a * b;
-        const pheptru = a / b;
-        document.getElementById("Display").innerHTML = 'phepcong =' + phepcong;
-
+        let a = Number(sothu1);
+        let b = Number(sothu2);
+        if (chondau === "+") {
+            document.getElementById("Display").innerHTML = 'phepcong =' + (a + b);
+        } else if (chondau === "-") {
+            document.getElementById("Display").innerHTML = 'pheptru =' + (a - b);
+        } else if (chondau === "*") {
+            document.getElementById("Display").innerHTML = 'phepnhan =' + (a * b);
+        } else {
+            document.getElementById("Display").innerHTML = 'phepchia =' + (a / b);
         }
-
-
     }
 </script>
 </html>

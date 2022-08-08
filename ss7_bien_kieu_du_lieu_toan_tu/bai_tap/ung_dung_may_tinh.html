@@ -39,8 +39,8 @@
     function phepcong() {
         let sothu1 = document.getElementById("nhapsothu1").value;
         let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = parseInt(sothu1);
-        const b = parseInt(sothu2);
+        const a = Number(sothu1);
+        const b = Number(sothu2);
         let phepcong = a + b;
         document.getElementById("Display").innerHTML = 'Result Addition :' + phepcong;
     }
@@ -48,28 +48,28 @@
     function pheptru() {
         let sothu1 = document.getElementById("nhapsothu1").value;
         let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = parseInt(sothu1);
-        const b = parseInt(sothu2);
+        const a = Number(sothu1);
+        const b = Number(sothu2);
         let pheptru = a - b;
-        document.getElementById("Display").innerHTML = 'Result Addition :' + pheptru;
+        document.getElementById("Display").innerHTML = 'Result Subtraction :' + pheptru;
     }
 
     function phepnhan() {
         let sothu1 = document.getElementById("nhapsothu1").value;
         let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = parseInt(sothu1);
-        const b = parseInt(sothu2);
+        const a = Number(sothu1);
+        const b = Number(sothu2);
         let phepnhan = a * b;
-        document.getElementById("Display").innerHTML = 'Result Addition :' + phepnhan;
+        document.getElementById("Display").innerHTML = 'Result Multiplication :' + phepnhan;
     }
 
     function phepchia() {
         let sothu1 = document.getElementById("nhapsothu1").value;
         let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = parseInt(sothu1);
-        const b = parseInt(sothu2);
+        const a = Number(sothu1);
+        const b = Number(sothu2);
         let phepchia = a / b;
-        document.getElementById("Display").innerHTML = 'Result Addition :' + phepchia;
+        document.getElementById("Display").innerHTML = 'Result Division :' + phepchia;
     }
 
 
