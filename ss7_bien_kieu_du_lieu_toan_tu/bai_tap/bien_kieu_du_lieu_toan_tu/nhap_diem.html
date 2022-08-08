@@ -8,15 +8,12 @@
 
 </body>
 <script>
-    let diemly = prompt('Nhập điểm vật lý');
-    let diemhoa = prompt('Nhập điểm hóa học');
-    let diemsinh = prompt('Nhập điểm sinh học');
-    const a = parseInt(diemly);
-    const b = parseInt(diemhoa);
-    const c = parseInt(diemsinh);
-    let sum = a + b + c;
-    let average = (a + b +c) / 3;
-    document.write('Tổng điểm = ' + sum,'Trung bình =' + average);
+    let pointPhysical = parseFloat(prompt('Nhập điểm vật lý'));
+    let pointChemicals = parseFloat(prompt('Nhập điểm hóa học'));
+    let pointBiological = parseFloat(prompt('Nhập điểm sinh học'));
+    let sum = pointPhysical + pointChemicals + pointBiological;
+    let average = (pointPhysical + pointChemicals + pointBiological) / 3;
+    document.write('Tổng điểm = ' + sum, 'Trung bình =' + average);
 
 </script>
 </html>

@@ -28,7 +28,7 @@
                 <option value="USD">USD</option>
                 <option value="VND">VND</option>
             </select></td>
-            <td><input type="button" value="Convert" onclick="sotienquydoi()"></td>
+            <td><input type="button" value="Convert" onclick="dosth()"></td>
         </tr>
     </table>
     <p id="Display">Hiển thị</p>
@@ -36,20 +36,18 @@
 
 </body>
 <script>
-    function sotienquydoi() {
-        let sotien = document.getElementById("Amount").value;
-        let v = document.getElementById("from").value;
-        let u = document.getElementById("to").value;
-        const st = parseInt(sotien);
-        // sotien = Number(sotien);
-        if (v === "VND" && u === "USD") {
-            document.getElementById("Display").innerHTML = 'Tiền USD :' + st / 23182;
-        } else if (v === "USD" && u === "VND") {
-            document.getElementById("Display").innerHTML = 'Tiền VND :' + st * 23182;
-        } else if (v === "VND" && u === "VND") {
-            document.getElementById("Display").innerHTML = 'Tiền VND :' + st;
+    function dosth() {
+        let money = parseInt(document.getElementById("Amount").value);
+        let moneyVnd = document.getElementById("from").value;
+        let moneyUsd = document.getElementById("to").value;
+        if (moneyVnd == "VND" && moneyUsd == "USD") {
+            document.getElementById("Display").innerHTML = 'Tiền USD :' + money / 23182;
+        } else if (moneyVnd == "USD" && moneyUsd == "VND") {
+            document.getElementById("Display").innerHTML = 'Tiền VND :' + money * 23182;
+        } else if (moneyVnd == "VND" && moneyUsd == "VND") {
+            document.getElementById("Display").innerHTML = 'Tiền VND :' + money;
         } else {
-            document.getElementById("Display").innerHTML = 'Tiền USD :' + st;
+            document.getElementById("Display").innerHTML = 'Tiền USD :' + money;
         }
     }
 </script>

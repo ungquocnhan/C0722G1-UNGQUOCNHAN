@@ -21,14 +21,14 @@
 <form>
     <table>
         <tr>
-            <td colspan="2"><input type="number" id="nhapsothu1" class="exam3"></td>
-            <td colspan="2"><input type="number" id="nhapsothu2" class="exam3"></td>
+            <td colspan="2"><input type="number" id="number1" class="exam3"></td>
+            <td colspan="2"><input type="number" id="number2" class="exam3"></td>
         </tr>
         <tr>
-            <td><input type="button" value="Addition(+)" onclick="phepcong()" class="exam2"></td>
-            <td><input type="button" value="Subtraction(-)" onclick="pheptru()" class="exam2"></td>
-            <td><input type="button" value="Multiplication(*)" onclick="phepnhan()" class="exam2"></td>
-            <td><input type="button" value="Division(/)" onclick="phepchia()" class="exam2"></td>
+            <td><input type="button" value="Addition(+)" onclick="addition()" class="exam2"></td>
+            <td><input type="button" value="Subtraction(-)" onclick="subtration()" class="exam2"></td>
+            <td><input type="button" value="Multiplication(*)" onclick="multiplication()" class="exam2"></td>
+            <td><input type="button" value="Division(/)" onclick="division()" class="exam2"></td>
         </tr>
     </table>
     <p id="Display">Hiển thị</p>
@@ -36,40 +36,32 @@
 
 </body>
 <script>
-    function phepcong() {
-        let sothu1 = document.getElementById("nhapsothu1").value;
-        let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = Number(sothu1);
-        const b = Number(sothu2);
-        let phepcong = a + b;
-        document.getElementById("Display").innerHTML = 'Result Addition :' + phepcong;
+    function addition() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        let addition = number1 + number2;
+        document.getElementById("Display").innerHTML = 'Result Addition :' + addition ;
     }
 
-    function pheptru() {
-        let sothu1 = document.getElementById("nhapsothu1").value;
-        let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = Number(sothu1);
-        const b = Number(sothu2);
-        let pheptru = a - b;
-        document.getElementById("Display").innerHTML = 'Result Subtraction :' + pheptru;
+    function subtration() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        let subtration = number1 - number2;
+        document.getElementById("Display").innerHTML = 'Result Subtraction :' + subtration;
     }
 
-    function phepnhan() {
-        let sothu1 = document.getElementById("nhapsothu1").value;
-        let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = Number(sothu1);
-        const b = Number(sothu2);
-        let phepnhan = a * b;
-        document.getElementById("Display").innerHTML = 'Result Multiplication :' + phepnhan;
+    function multiplication() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        let multiplication = number1 * number2;
+        document.getElementById("Display").innerHTML = 'Result Multiplication :' + multiplication;
     }
 
-    function phepchia() {
-        let sothu1 = document.getElementById("nhapsothu1").value;
-        let sothu2 = document.getElementById("nhapsothu2").value;
-        const a = Number(sothu1);
-        const b = Number(sothu2);
-        let phepchia = a / b;
-        document.getElementById("Display").innerHTML = 'Result Division :' + phepchia;
+    function division() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        let division = number1 / number2;
+        document.getElementById("Display").innerHTML = 'Result Division :' + division;
     }
 
 

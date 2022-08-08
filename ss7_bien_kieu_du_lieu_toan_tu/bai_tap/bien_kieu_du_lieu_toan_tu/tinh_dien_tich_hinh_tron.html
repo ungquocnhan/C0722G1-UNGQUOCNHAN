@@ -8,10 +8,9 @@
 
 </body>
 <script>
-    let bankinh = prompt('Nhập bán kính hình tròn');
-    const r = parseInt(bankinh);
+    let radius = parseFloat(prompt('Nhập bán kính hình tròn'));
     const pi = 3.14;
-    let dientich = pi * r * r;
-    document.write('Diện tích bằng =' + dientich);
+    let area = pi * radius * radius;
+    document.write('Diện tích bằng =' + area);
 </script>
 </html>
