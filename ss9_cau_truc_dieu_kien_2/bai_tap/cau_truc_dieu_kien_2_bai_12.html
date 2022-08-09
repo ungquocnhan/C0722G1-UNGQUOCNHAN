@@ -7,5 +7,28 @@
 <body>
 
 </body>
+<script>
+    // Ngân hàng	01 tháng	03 tháng	06 tháng	12 tháng	18 tháng	24 tháng	36 tháng
+    // VietinBank	3,10	    3,40	     4,00	     5,60	     5,60	     5,60	     5,60
+    let money = parseInt(prompt('Nhập số tiền gởi'));
+    let month = parseInt(prompt('Nhập số tháng gởi'));
+    switch (month) {
+        case 1:
+            document.write('Số tiền lãi:' + (money * 3.1 / 12 * month / 100));
+            break;
+        case 3:
+            document.write('Số tiền lãi:' + (money * 3.4 / 12 * month / 100));
+            break;
+        case 6:
+            document.write('Số tiền lãi:' + (money * 4 / 12 * month / 100));
+            break;
+        case 12:
+        case 18:
+        case 24:
+        case 36:
+            document.write('Số tiền lãi:' + (money * 5.6 / 12 * month / 100));
+            break;
+    }
+</script>
 
 </html>

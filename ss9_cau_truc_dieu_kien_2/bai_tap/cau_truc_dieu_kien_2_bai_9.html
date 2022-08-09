@@ -7,4 +7,18 @@
 <body>
 
 </body>
+<script>
+    let number1 = +prompt('Nhập vào a');
+    let number2 = +prompt('Nhập vào b');
+    let number3 = +prompt('Nhập vào c');
+    if (number1 > 0 && number2 > 0 && number3 > 0) {
+        if ((number1 + number2) > number3 && (number2 + number3) > number1 && (number1 + number3) > number2) {
+            alert('Là cạnh của tam giác');
+        } else {
+            alert('Không phải cạnh của tam giác');
+        }
+    } else {
+        alert('Không phải cạnh của tam giác');
+    }
+</script>
 </html>

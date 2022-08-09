@@ -7,4 +7,26 @@
 <body>
 
 </body>
+<script>
+    // Bậc 1: Cho kWh từ 0 - 50      1.678
+    // Bậc 2: Cho kWh từ 51 - 100    1.734
+    // Bậc 3: Cho kWh từ 101 - 200   2.014
+    // Bậc 4: Cho kWh từ 201 - 300   2.536
+    // Bậc 5: Cho kWh từ 301 - 400   2.834
+    // Bậc 6: Cho kWh từ 401 trở lên 2.927
+    let electricLetters = parseFloat(prompt('Nhập vào số chữ điện:'));
+    if (electricLetters < 50) {
+        document.write('Số tiền thanh toán:' + electricLetters * 1678 + 'đồng');
+    } else if (electricLetters < 100) {
+        document.write('Số tiền thanh toán:' + ((50 * 1678) + (electricLetters - 50) * 1734) + 'đồng');
+    } else if (electricLetters < 200) {
+        document.write('Số tiền thanh toán:' + ((50 * 1678) + (50 * 1734) + (electricLetters - 100) * 2014) + 'đồng');
+    } else if (electricLetters < 300) {
+        document.write('Số tiền thanh toán:' + ((50 * 1678) + (50 * 1734) + (100 * 2014) + (electricLetters - 200) * 2536) + 'đồng');
+    } else if (electricLetters < 400) {
+        document.write('Số tiền thanh toán:' + ((50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + (electricLetters - 300) * 2834) + 'đồng');
+    }else {
+        document.write('Số tiền thanh toán:' + ((50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + (100 * 2834) + (electricLetters-400) * 2927) + 'đồng');
+    }
+</script>
 </html>

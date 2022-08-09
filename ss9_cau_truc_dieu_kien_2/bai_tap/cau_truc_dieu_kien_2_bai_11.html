@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<!--<img src="https://image.luatvietnam.vn/uploaded/665twebp/images/original/2021/12/26/cach-tinh-thue-tncn_2612143506.png" alt="">-->
 
 </body>
+<script>
+    let personalIncome = parseInt(prompt('nhập số tiền thu nhập cá nhân/tháng:', 'đồng'));
+    if (personalIncome < 5000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.05 * personalIncome) + 'đồng');
+    } else if (personalIncome < 10000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.1 * personalIncome - 250000) + 'đồng');
+    } else if (personalIncome < 18000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.15 * personalIncome - 750000) + 'đồng');
+    } else if (personalIncome < 32000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.2 * personalIncome - 1650000) + 'đồng');
+    } else if (personalIncome < 52000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.25 * personalIncome - 3250000) + 'đồng');
+    } else if (personalIncome < 80000000) {
+        document.write('Thuế thu nhập cá nhân là:' + (0.3 * personalIncome - 5850000) + 'đồng');
+    } else {
+        document.write('Thuế thu nhập cá nhân là:' + (0.35 * personalIncome - 9850000) + 'đồng');
+
+    }
+</script>
 </html>
