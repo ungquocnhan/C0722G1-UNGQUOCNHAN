@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number1 = parseInt(prompt('Nhập số thứ 1:'));
+    let number2 = parseInt(prompt('Nhập số thứ 2:'));
+    let number3 = parseInt(prompt('Nhập số thứ 3:'));
+    if (number1 > number2) {
+        if (number1 > number3) {
+            document.write('Giá trị lớn nhất là :' + number1);
+        } else {
+            document.write('Giá trị lớn nhất là :' + number3);
+        }
+    } else if (number2 > number3) {
+        document.write('Giá trị lớn nhất là :' + number2);
+    } else {
+        document.write('Giá trị lớn nhất là :' + number3);
+    }
+</script>
+</html>

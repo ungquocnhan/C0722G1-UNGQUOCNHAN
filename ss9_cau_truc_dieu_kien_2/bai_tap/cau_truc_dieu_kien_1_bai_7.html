@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 600 đồng cho mỗi gọi của 50 phút đầu tiên.
+    // 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    // 300 đồng 150 ->200phút
+    // 200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+    let minute = prompt('Nhập vào số phút gọi:');
+    if (minute < 50) {
+        document.write('Số tiền cước là:' + (minute * 600) + 'đồng');
+    } else if (minute < 150) {
+        document.write('Số tiền cước là:' + ((50 * 600) + (minute - 50) * 400) + 'đồng');
+    } else if (minute < 200) {
+        document.write('Số tiền cước là:' + ((50 * 600) + (100 * 400) + (minute - 150) * 300) + 'đồng');
+    } else {
+        document.write('Số tiền cước là:' + ((50 * 600) + (100 * 400) + (50 * 300) + (minute - 200) * 200) + 'đồng');
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<!--Giá trị của hóa đơn là:-->
+
+<!-- - Từ 0 đến 100.000 => 2%-->
+
+<!-- - Từ 100.000 đến 500.000 => 5%-->
+
+<!-- - Trên 500.000 => 9%-->
+<!--Giả thiết hóa đơn của khách hàng là 1.000.000 thì số tiền hoa hồng có được là: 100.000 x 2% + (500.000 -100.000) x 5% + (1.000.000 - 500.000) x 9% = 67.000-->
+
+<script>
+    let money = parseInt(prompt('Số tiền khách hàng đã mua:'));
+    if (money < 100000) {
+        document.write('Hoa hồng bạn nhận được là:' + (money * 0.02));
+    } else if (money < 500000) {
+        document.write('Hoa hồng bạn nhận được là:' + ((100000 * 0.02)+(money - 100000)*0.05));
+    } else {
+        document.write('Hoa hồng bạn nhận được là:' + ((100000 * 0.02)+(400000*0.05)+(money - 500000)*0.09));
+    }
+</script>
+</html>
