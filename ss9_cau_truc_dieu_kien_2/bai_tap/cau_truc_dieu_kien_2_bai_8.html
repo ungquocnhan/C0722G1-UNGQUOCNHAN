@@ -8,11 +8,15 @@
 
 </body>
 <script>
-    let age = parseInt(prompt('Nhập số tuổi:'));
-    if (age > 0 && age < 120) {
-        alert('Là tuổi của một người');
-    } else {
-        alert('Nhập lại tuổi');
+    let age = +(prompt('Nhập số tuổi:'));
+    if(age % 1 == 0) {
+        if (age > 0 && age < 120) {
+            alert('Là tuổi của một người');
+        } else {
+            alert('Nhập lại tuổi');
+        }
+    }else {
+        alert('Nhập lai tuổi');
     }
 </script>
 </html>
