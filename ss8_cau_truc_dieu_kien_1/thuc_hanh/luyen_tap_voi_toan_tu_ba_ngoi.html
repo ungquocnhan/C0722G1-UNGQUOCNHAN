@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let a = prompt("a: ");
+    let b = prompt("b: ");
+    let result = (a + b < 4) ? 'Below' : 'Over';
+    document.write(result);
+
+</script>
+
+
+
+<script>
+    let message;
+    let login = prompt('nhập nào');
+    if (login == 'Employee'){
+        message = "Hello";
+    }else if (login == 'Director'){
+        message = "Greetings";
+    }else if (login == ''){
+        message = "No login";
+    }else {
+        message = '';
+    }
+    alert(message);
+</script>
+
+
+<script>
+    let login = prompt('Enter:');
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                '';
+    alert(message);
+</script>
 </html>

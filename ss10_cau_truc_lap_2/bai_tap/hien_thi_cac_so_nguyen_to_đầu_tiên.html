@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let c = 0;
+    let N = 2;
+    while (c < 20) {
+        let count = 0;
+        for (let j = 2; j < N; j++) {
+            if (N % j == 0) {
+                count += 1;
+            }
+        }
+        if (count == 0) {
+            document.write(N + "<br>");
+            c++;
+        }
+        N++;
+
+    }
+
+
+</script>
+</html>

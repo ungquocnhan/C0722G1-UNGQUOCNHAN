@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let i;
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let fibonacci;
+    for(i=0;i<20;i++){
+        fibonacci = fibo1;
+        fibo1 = fibo2;
+        fibo2 = fibonacci + fibo1;
+        document.write(fibonacci + '<br>');
+    }
+</script>
+</html>

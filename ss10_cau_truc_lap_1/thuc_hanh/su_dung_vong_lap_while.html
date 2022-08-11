@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
 </body>
+<script>
+    let number = +prompt('Nhập vào số:');
+    let total = 0;
+    while (number !== -1) {
+        number = +prompt('nhập vào số');
+        document.write(number + "<br>");
+        total += number;
+    }
+    alert(total);
+</script>
 </html>

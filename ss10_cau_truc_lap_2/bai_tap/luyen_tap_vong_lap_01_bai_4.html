@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = +prompt('nhập');
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let fibonacci;
+    for (let i = 0; i < number; i++) {
+        fibonacci = fibo1;
+        fibo1 = fibo2;
+        fibo2 = fibonacci + fibo1;
+        if (fibonacci % 5 === 0) {
+            document.write('Số chia hết cho 5:' + fibonacci);
+        }
+        break;
+
+    }
+</script>
+</html>

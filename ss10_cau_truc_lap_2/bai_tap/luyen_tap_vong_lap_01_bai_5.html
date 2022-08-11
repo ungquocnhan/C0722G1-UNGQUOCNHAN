@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let fibonacci;
+    let sum = 0;
+    for (let i = 0; i < 20; i++) {
+        fibonacci = fibo1;
+        sum += fibonacci;
+        fibo1 = fibo2;
+        fibo2 = fibonacci + fibo1;
+    }
+    document.write('Tỏng dãy số fibonacci:' + sum);
+</script>
+</html>
