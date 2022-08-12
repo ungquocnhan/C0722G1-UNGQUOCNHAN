@@ -11,9 +11,11 @@
     function playGame() {
         let number = +prompt('Nhập vào bạn muốn đoán trong khoảng nào:');
         let numberRandom = parseInt(Math.random() * number);
-        let numberGuess = +prompt('Nhập số mà bạn đoán');
+        let numberGuess;
         let count = 1;
+        alert(numberRandom)
         do {
+            numberGuess = +prompt('Nhập số mà bạn đoán');
             if (numberGuess > numberRandom) {
                 alert('Số bạn đoán lớn hơn');
             } else if (numberGuess < numberRandom) {
@@ -22,7 +24,6 @@
                 alert('Bạn đã đoán đúng');
                 break;
             }
-            numberGuess = +prompt("Nhập số mà bạn đoán");
             if (count === 3) {
                 alert('Bạn đã hết lượt');
                 break;
