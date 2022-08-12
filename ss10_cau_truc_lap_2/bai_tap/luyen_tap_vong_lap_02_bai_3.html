@@ -7,4 +7,49 @@
 <body>
 
 </body>
+<script>
+    //Tam giác vuông góc trái dưới.
+    for (let i = 1; i <= 5; i++) {
+        for (let j = j1; j <= i; j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+    //Tam giác vuông góc trái trên.
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+    //Tam giác vuông góc phải dưới'
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j < i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let k = 5; k >= i; k--) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+    document.write('<br>');
+    //Tam giác vuông góc phải trên.
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 2; j <= i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let k = 0; k <= 5 - i; k++) {
+            document.write('*');
+
+        }
+        document.write('<br>');
+    }
+k
+
+</script>
 </html>

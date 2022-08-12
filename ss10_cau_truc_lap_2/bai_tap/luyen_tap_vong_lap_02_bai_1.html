@@ -7,4 +7,18 @@
 <body>
 
 </body>
+<script>
+    let number = +prompt('Dãy số fibonacci muốn tạo');
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let fibonacci;
+    let i=0;
+    while (i < number){
+        fibonacci = fibo1;
+        fibo1 = fibo2;
+        fibo2 = fibonacci + fibo1;
+        document.write(fibonacci + '<br>');
+        i++;
+    }
+</script>
 </html>

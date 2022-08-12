@@ -7,4 +7,15 @@
 <body>
 
 </body>
+<script>
+    let money = +prompt('Nhập số tiền ban đầu:');
+    let month = +prompt('Số tháng gởi');
+    let interestRate = +prompt('Lãi suất hàng tháng');
+    let interest = 0;
+    for (let i = 1; i <= month; i++) {
+        interest = money * interestRate / 100;
+        money += interest;
+    }
+    document.write('Số tiền lãi nhận được: ' + money);
+</script>
 </html>
