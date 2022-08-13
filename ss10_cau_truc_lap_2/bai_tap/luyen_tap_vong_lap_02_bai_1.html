@@ -12,13 +12,11 @@
     let fibo1 = 0;
     let fibo2 = 1;
     let fibonacci;
-    let i=0;
-    while (i < number){
+    for (let i = 0; i < number; i++) {
         fibonacci = fibo1;
         fibo1 = fibo2;
         fibo2 = fibonacci + fibo1;
         document.write(fibonacci + '<br>');
-        i++;
     }
 </script>
 </html>

@@ -10,11 +10,9 @@
 <script>
     let number = +prompt('Nhập số cần tính giai thừa');
     let factorial = 1;
-    let i = 1;
     if (number > 0) {
-        while (i <= number) {
+        for (let i = 1; i <= number; i++) {
             factorial = factorial * i;
-            i++;
         }
     }
     document.write('Giai thừa là:' + factorial);

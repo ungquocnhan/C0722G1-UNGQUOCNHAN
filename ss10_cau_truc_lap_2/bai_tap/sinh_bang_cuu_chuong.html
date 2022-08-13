@@ -9,12 +9,10 @@
 </body>
 <script>
     let square;
-    let i;
-    let j;
     square = "<table border='1' width='300' cellpadding='3' cellspacing='0'>";
-    for (i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
         square = square + "<tr>";
-        for (j = 1; j < 10; j++) {
+        for (let j = 1; j < 10; j++) {
             square = square + "<td>" + i + 'x' + j + '=' + i * j + "</td>";
         }
         square = square + "</tr>";
