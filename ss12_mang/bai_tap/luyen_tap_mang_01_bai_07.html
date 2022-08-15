@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("Nhập số phần tử của mảng : ");
+    let arrayNumber = new Array(n);
+    for (let i = 0; i < arrayNumber.length; i++) {
+        arrayNumber[i] = +prompt("Nhập phần tử của mảng :" + i);
+    }
+    document.write(arrayNumber + "<br>");
+    let numberV= +prompt("Nhập số V:");
+    for (let i = 0; i < arrayNumber.length ; i++) {
+        if(numberV === arrayNumber[i]){
+            arrayNumber[i] = arrayNumber[i + 1];
+            arrayNumber[arrayNumber.length - 1] = 0;
+        }
+    }document.write(arrayNumber);
+</script>
+</html>

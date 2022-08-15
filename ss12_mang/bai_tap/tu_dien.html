@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Từ điển</h2>
+<body>
+<form>
+    <input type="text" id="nhap_tu"/>
+    <button onclick="translate()">Dịch</button>
+    <p id="Display"></p>
+</form>
+
+</body>
+<script>
+    function translate() {
+        let enterText = document.getElementById('nhap_tu').value;
+        let english = ["apple", "banana", "orange", "potato"];
+        let vietnamese = ["táo", "chuối", "cam", "khoai tây"];
+        let index = -1;
+        for (let i = 0; i < english.length; i++) {
+            if (enterText == english[i]) {
+                index = i;
+            }
+            if (index == -1) {
+                document.getElementById('Display').innerHTML = 'Không có';
+
+            } else {
+                document.getElementById('Display').innerHTML = vietnamese[i];
+            }
+        }
+    }
+</script>
+</html>

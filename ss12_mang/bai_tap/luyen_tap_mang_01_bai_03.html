@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrayNumber = [9, 10, 74, 24, 64, 44, 54, 34, 15, 1];
+    let max = arrayNumber[0];
+    let sum = 0;
+    for (let i = 0; i < arrayNumber.length; i++) {
+        if (arrayNumber[i] > max) {
+            max = arrayNumber[i];
+        }
+        sum += arrayNumber[i];
+    }
+    document.write("Giá trị lớn nhất: " + max + "<br>" + "Gía trị trung bình: " + sum / arrayNumber.length)
+</script>
+</html>

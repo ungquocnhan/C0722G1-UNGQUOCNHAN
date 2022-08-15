@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("Nhập số phần tử của mảng A:");
+    let arrayNumberA = new Array(n);
+    for (let i = 0; i < arrayNumberA.length ; i++) {
+        arrayNumberA[i] = +prompt("Nhập phần tử của mảng A:" + i);
+    }
+    document.write(arrayNumberA + "<br>");
+    let m = +prompt("Nhập số phần tử của mảng B:");
+    let arrayNumberB = new Array(m);
+    for (let i = 0; i < arrayNumberB.length ; i++) {
+        arrayNumberB[i] = +prompt("Nhập phần tử của mảng B:" + i);
+    }
+    document.write(arrayNumberB + "<br>");
+    let arrayNumberC = arrayNumberB.concat(arrayNumberA);
+    document.write(arrayNumberC);
+</script>
+</html>

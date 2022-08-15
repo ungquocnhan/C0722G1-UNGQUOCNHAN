@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrayNumber = [9, 10, 15, 56, 22, 33, 44, 55, 66, 1];
+    let max = arrayNumber[0];
+    let index = 0;
+    for (let i = 0; i < arrayNumber.length; i++) {
+        if (arrayNumber[i] > max) {
+            max = arrayNumber[i];
+            index = i;
+        }
+    }
+    document.write("Giá trị lớn nhất: " + max + " vị trí: " + index);
+</script>
+</html>
