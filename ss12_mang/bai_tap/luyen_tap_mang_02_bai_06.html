@@ -7,4 +7,19 @@
 <body>
 
 </body>
+<script>
+    let lengthArray = prompt("Nhập độ dài mảng :");
+    let array = [];
+    for (let i = 0; i < lengthArray; i++) {
+        array[i] = prompt("Nhập phần tử mảng :" + i);
+    }
+    document.write(array + "<br>");
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == '-') {
+            array[i] = '_';
+        }
+    }
+    document.write(array);
+
+</script>
 </html>

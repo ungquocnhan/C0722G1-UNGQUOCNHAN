@@ -7,4 +7,21 @@
 <body>
 
 </body>
+<script>
+    let string = ['c', 's', 'c', '2', '6', '1'];
+    //Dùng hàm reverse()
+    // string.reverse();
+    // document.write(string.join(''));
+    let first = 0;
+    let last = string.length - 1;
+
+    while (first < last) {
+        let a = string[first];
+        string[first] = string[last];
+        string[last] = a;
+        first++;
+        last--;
+    }
+    document.write(string.join(''));
+</script>
 </html>

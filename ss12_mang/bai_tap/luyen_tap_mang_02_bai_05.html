@@ -7,4 +7,32 @@
 <body>
 
 </body>
+<script>
+    let lengthArrayA = prompt("Nhập độ dài mảng A :");
+    let arrayA = [];
+    for (let i = 0; i < lengthArrayA; i++) {
+        arrayA[i] = prompt("Nhập phần tử mảng A :" + i);
+    }
+    document.write(arrayA);
+    let lengthArrayB = prompt("Nhập độ dài mảng B :");
+    let arrayB = [];
+    for (let i = 0; i < lengthArrayB; i++) {
+        arrayB[i] = prompt("Nhập phần tử mảng B :" + i);
+    }
+    document.write(arrayB)
+
+    let count = 0;
+    for (let i = 0; i < arrayA.length; i++) {
+        for (let j = 0; j < arrayB.length; j++) {
+            if (arrayA[i] == arrayB[j]) {
+                count++;
+            }
+        }
+    }
+    if (count == arrayA.length && count == arrayB.length) {
+        document.write('Chuỗi A giống chuỗi B');
+    } else {
+        document.write('Chuỗi A khác chuỗi B');
+    }
+</script>
 </html>

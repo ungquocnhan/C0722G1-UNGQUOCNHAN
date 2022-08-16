@@ -7,4 +7,16 @@
 <body>
 
 </body>
+<script>
+    let array = [1, 'a', 4, 'b', -1, 'c', 8, 'd', 10, 'e'];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 1 == 0) {
+            count++;
+            document.write('Số:' + array[i] + "<br>");
+        }
+    }
+    document.write('Ký tự số trong mảng :' + count);
+
+</script>
 </html>

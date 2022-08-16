@@ -8,19 +8,27 @@
 
 </body>
 <script>
-    let n = +prompt("Nhập số phần tử của mảng A:");
-    let arrayNumberA = new Array(n);
-    for (let i = 0; i < arrayNumberA.length ; i++) {
+    let lengthArrayA = +prompt("Nhập độ dài của mảng A:");
+    let arrayNumberA = new Array(lengthArrayA);
+    for (let i = 0; i < arrayNumberA.length; i++) {
         arrayNumberA[i] = +prompt("Nhập phần tử của mảng A:" + i);
     }
     document.write(arrayNumberA + "<br>");
-    let m = +prompt("Nhập số phần tử của mảng B:");
-    let arrayNumberB = new Array(m);
-    for (let i = 0; i < arrayNumberB.length ; i++) {
+    let lengthArrayB = +prompt("Nhập độ dài của mảng B:");
+    let arrayNumberB = new Array(lengthArrayB);
+    for (let i = 0; i < arrayNumberB.length; i++) {
         arrayNumberB[i] = +prompt("Nhập phần tử của mảng B:" + i);
     }
     document.write(arrayNumberB + "<br>");
-    let arrayNumberC = arrayNumberB.concat(arrayNumberA);
+    // let arrayNumberC = arrayNumberB.concat(arrayNumberA);
+    // document.write(arrayNumberC);
+    let arrayNumberC = [];
+    for (let j = 0; j < arrayNumberB.length; j++) {
+        arrayNumberC.push(arrayNumberB[j]);
+    }
+    for (let i = 0; i < arrayNumberA.length ; i++) {
+        arrayNumberC.push(arrayNumberA[i]);
+    }
     document.write(arrayNumberC);
 </script>
 </html>

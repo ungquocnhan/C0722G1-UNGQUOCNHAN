@@ -6,28 +6,27 @@
 </head>
 <h2>Từ điển</h2>
 <body>
-<form>
-    <input type="text" id="nhap_tu"/>
-    <button onclick="translate()">Dịch</button>
-    <p id="Display"></p>
-</form>
+
+<input type="text" id="enterText"/>
+<button type="button" onclick="translate1()">Dịch</button>
+<p id="Display"></p>
+
 
 </body>
 <script>
-    function translate() {
-        let enterText = document.getElementById('nhap_tu').value;
+    function translate1() {
+        let enterText = document.getElementById('enterText').value;
         let english = ["apple", "banana", "orange", "potato"];
         let vietnamese = ["táo", "chuối", "cam", "khoai tây"];
-        let index = -1;
+        let indexEnglish = -1;
         for (let i = 0; i < english.length; i++) {
             if (enterText == english[i]) {
-                index = i;
+                indexEnglish = i;
             }
-            if (index == -1) {
+            if (indexEnglish == -1) {
                 document.getElementById('Display').innerHTML = 'Không có';
-
             } else {
-                document.getElementById('Display').innerHTML = vietnamese[i];
+                document.getElementById('Display').innerHTML = vietnamese[indexEnglish];
             }
         }
     }

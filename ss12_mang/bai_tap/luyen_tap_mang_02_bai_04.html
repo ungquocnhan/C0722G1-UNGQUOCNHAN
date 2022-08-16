@@ -7,4 +7,15 @@
 <body>
 
 </body>
+<script>
+    let array = prompt('Nhập chuỗi :');
+    document.write(array + "<br>");
+    let count = 0;
+    let splitArray = array.split(' ');
+    document.write(splitArray + "<br>");
+    for (let i = 0; i < splitArray.length; i++) {
+        count++;
+    }
+    document.write('Số từ trong chuỗi :' + count);
+</script>
 </html>

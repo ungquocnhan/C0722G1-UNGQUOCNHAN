@@ -8,8 +8,8 @@
 
 </body>
 <script>
-    let n = +prompt("Nhập số phần tử của mảng:");
-    let arrayNumber = new Array(n);
+    let lengthArray = +prompt("Nhập độ dài của mảng:");
+    let arrayNumber = new Array(lengthArray);
     for (let i = 0; i < arrayNumber.length ; i++) {
         arrayNumber[i] = +prompt("Nhập phần tử của mảng:" + i);
     }
@@ -17,6 +17,7 @@
     arrayNumber.sort();//Hàm sắp xếp tăng dần
     arrayNumber.reverse().join(",");// Hàm đảo ngược
     document.write(arrayNumber);
+
 
 </script>
 </html>

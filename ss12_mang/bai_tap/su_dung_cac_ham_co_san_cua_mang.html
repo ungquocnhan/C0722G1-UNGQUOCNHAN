@@ -7,4 +7,43 @@
 <body>
 
 </body>
+<script>
+    //Bài 1
+    // let myColor = ["Red","Green","White","Black"];
+    // document.write(myColor.toString() + "<br>");
+    // document.write(myColor.join() + "<br>");
+    // document.write(myColor.join('-'));
+
+
+    //Bài 2
+    // let number = window.prompt();
+    // let str = number.toString();
+    // let result = [str[0]];
+    // for (let i = 0; i < str.length; i++) {
+    //     if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+    //         result.push('-', str[i]);
+    //     } else {
+    //         result.push(str[i]);
+    //     }
+    //
+    // }
+    // document.write(result.join(''));
+
+    //Bài 3
+    let str = prompt("Nhập vào : ");
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for (let i = 0; i < str.length; i++) {
+        if (upper.indexOf(str[i]) !== -1) {
+            result.push(str[i].toLowerCase());
+        } else if (lower.indexOf(str[i]) !== -1) {
+            result.push(str[i].toUpperCase());
+        } else {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
 </html>

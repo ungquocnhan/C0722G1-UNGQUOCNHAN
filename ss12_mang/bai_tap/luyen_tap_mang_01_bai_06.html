@@ -8,19 +8,24 @@
 
 </body>
 <script>
-    let n = +prompt("Nhập số phần tử của mảng : ");
-    let arrayNumber = new Array(n);
+    let lengthArray = +prompt("Nhập độ dài của mảng : ");
+    let arrayNumber = new Array(lengthArray);
     for (let i = 0; i < arrayNumber.length; i++) {
         arrayNumber[i] = +prompt("Nhập phần tử của mảng :" + i);
     }
     document.write(arrayNumber);
     let numberV = +prompt("Nhập số V");
+    let count = 0;
     for (let i = 0; i < arrayNumber.length; i++) {
-        if (numberV === arrayNumber[i]) {
-            document.write("V is in the array " + arrayNumber[i] + "<br>");
-        } else {
-            document.write("V is not in the array" + "<br>");
+        if (numberV == arrayNumber[i]) {
+            count++;
         }
     }
+    if (count != 0) {
+        document.write("V is in the array ");
+    } else {
+        document.write("V is not in the array");
+    }
+
 </script>
 </html>
