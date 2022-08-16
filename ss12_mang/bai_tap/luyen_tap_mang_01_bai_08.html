@@ -10,14 +10,25 @@
 <script>
     let lengthArray = +prompt("Nhập độ dài của mảng:");
     let arrayNumber = new Array(lengthArray);
-    for (let i = 0; i < arrayNumber.length ; i++) {
+    for (let i = 0; i < arrayNumber.length; i++) {
         arrayNumber[i] = +prompt("Nhập phần tử của mảng:" + i);
     }
     document.write(arrayNumber + "<br>");
-    arrayNumber.sort();//Hàm sắp xếp tăng dần
-    arrayNumber.reverse().join(",");// Hàm đảo ngược
-    document.write(arrayNumber);
+    // arrayNumber.sort();//Hàm sắp xếp tăng dần
+    // arrayNumber.reverse().join(",");// Hàm đảo ngược
+    // document.write(arrayNumber);
 
+    let decrease;
+    for (let i = 0; i < arrayNumber.length - 1; i++) {
+        for (let j = i + 1; j < arrayNumber.length; j++) {
+            if (arrayNumber[i] < arrayNumber[j]) {
+                decrease = arrayNumber[i];
+                arrayNumber[i] = arrayNumber[j];
+                arrayNumber[j] = decrease;
+            }
+        }
+    }
+    document.write(arrayNumber);
 
 </script>
 </html>
