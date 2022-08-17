@@ -7,4 +7,29 @@
 <body>
 
 </body>
+<script>
+    function checkInArr(array, str) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == str) {
+                count++;
+            }
+        }
+        if (count != 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let lengthArr = prompt('Nhập độ dài mảng :');
+    let arr = [];
+    for (let i = 0; i < lengthArr; i++) {
+        arr[i] = prompt('Nhập phần tử của mảng' + i);
+    }
+    document.write(arr + '<br>');
+    let inputStr = prompt('Nhập vào ký tự');
+    document.write(inputStr + '<br>');
+    document.write(checkInArr(arr, inputStr));
+</script>
 </html>

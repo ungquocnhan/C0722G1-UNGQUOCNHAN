@@ -7,4 +7,16 @@
 <body>
 
 </body>
+<script>
+    function findIntegerPositive(number) {
+        if (number % 1 == 0 && number > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let numberInput = prompt('Nhập vào giá trị :');
+    document.write(findIntegerPositive(numberInput));
+</script>
 </html>

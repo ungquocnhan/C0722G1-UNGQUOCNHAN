@@ -7,4 +7,18 @@
 <body>
 
 </body>
+<script>
+    function swapNumber(number1, number2) {
+        let number;
+        number = number1;
+        number1 = number2;
+        number2 = number;
+        document.write('Số thứ 1 : ' + number1 + '<br>' + 'Số thứ 2 : ' + number2);
+    }
+
+    let numberInput1 = +prompt('Nhập vào số 1 :');
+    let numberInput2 = +prompt('Nhập vào số 2 :');
+    document.write('Số thứ 1 nhập : ' + numberInput1 + '<br>' + 'Số thứ 2 nhập : '+ numberInput2 + '<br>');
+    swapNumber(numberInput1, numberInput2);
+</script>
 </html>
