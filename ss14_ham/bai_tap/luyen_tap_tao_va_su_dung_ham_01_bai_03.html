@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function sumValue(number1, number2) {
+        let sum;
+        if (number1 <= number2) {
+            sum = number1 + number2;
+            return sum;
+        } else {
+            alert('Số thứ 1 lớn hơn số thứ 2');
+        }
+    }
+
+    let numberInput1 = +prompt('Nhập số thứ 1 :');
+    let numberInput2 = +prompt('Nhập số thứ 2 :');
+    document.write(sumValue(numberInput1, numberInput2));
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function feetToMeters(feet) {
+        let meters;
+        meters = 0.305 * feet;
+        return meters;
+    }
+
+    function metersToFeet(meters) {
+        let feet;
+        feet = 3.279 * meters;
+        return feet;
+    }
+
+    let feet = prompt('Nhập vào feet :');
+    let outputMeters = feetToMeters(feet);
+    document.write(feet + " feet " + '= ' + outputMeters + ' meters' + '<br>');
+
+    let meters = prompt('Nhập vào meters : ');
+    let outputFeet = metersToFeet(meters);
+    document.write(meters + ' meters ' + '= ' + outputFeet + ' feet');
+</script>
+</html>

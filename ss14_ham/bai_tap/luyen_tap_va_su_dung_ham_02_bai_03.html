@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function countFactorial(number) {
+        let factorial = 1;
+        for (let i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    let numberInput = +prompt('Nhập số :');
+    document.write('Giai thừa :' + countFactorial(numberInput));
+</script>
+</html>
