@@ -10,11 +10,11 @@
 <script>
     function isPrime(number) {
         if (number < 2) {
-           return false;
+            return false;
         } else {
             for (let i = 2; i < number; i++) {
                 if (number % i == 0) {
-                    return false
+                    return false;
                 }
             }
             return true;
@@ -24,6 +24,6 @@
 
     let number = prompt('Nhập số kiểm tra số nguyên tố :');
     let checkNumber = isPrime(number);
-    alert(checkNumber)
+    alert(checkNumber);
 </script>
 </html>
