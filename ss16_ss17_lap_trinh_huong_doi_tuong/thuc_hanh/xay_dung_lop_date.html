@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class myDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setDay(day) {
+            this.day = day;
+        }
+
+        setMonth(month) {
+            this.month = month;
+        }
+
+        setYear(year) {
+            this.year = year;
+        }
+
+        setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        toString() {
+            return day + "-" + month + "-" + year;
+        }
+    };
+    let date = new myDate(2, 2, 2007);
+    date.setDay(18);
+    date.setMonth(8);
+    date.setYear(2022);
+    date.setDate(18, 8, 2022);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    // alert(day + "/" + month + "/" + year);
+    alert(date.toString());
+</script>
+
+</html>

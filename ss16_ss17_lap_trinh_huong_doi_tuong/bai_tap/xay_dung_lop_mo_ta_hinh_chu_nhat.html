@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+<script>
+    let Rectangle = function (length, width) {
+            this.length = length;
+            this.width = width;
+            this.getLength = function () {
+                return this.length;
+            }
+            this.getWidth = function () {
+                return this.width;
+            }
+            this.setLength = function (length) {
+                this.getLength = length;
+            }
+            this.setWidth = function (width) {
+                this.getWidth = width;
+            }
+            this.getArea = function () {
+                return length * width;
+            }
+            this.getPerimeter = function () {
+                return 2 * (length + width);
+            }
+            this.draw = function (coordinatesX, coordinatesY)
+            {
+                let canvas = document.getElementById("myCanvas");
+                let ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(coordinatesX, coordinatesY, length, width);
+            }
+        }
+    ;
+    let rectangle = new Rectangle(150, 200);
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+    let area = rectangle.getArea();
+    let perimeter = rectangle.getPerimeter();
+    alert("length: " + length + "; width : " + width + "; area: " + area + "; perimeter: " + perimeter);
+rectangle.draw(100,100)
+
+</script>
+</html>
