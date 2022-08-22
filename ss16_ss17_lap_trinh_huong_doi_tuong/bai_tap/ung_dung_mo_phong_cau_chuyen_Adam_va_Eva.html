@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Apple {
+        constructor(weightApple) {
+            this.weightApple = weightApple;
+        }
+
+        getWeightApple() {
+            return this.weightApple;
+        }
+
+        setWeight(weightApple) {
+            this.weightApple = weightApple;
+        }
+
+
+        isEmpty() {
+            if (this.weightApple <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                document.write('No Apple');
+            } else {
+                this.weightApple--;
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return 'Male';
+            } else {
+                return 'Female';
+            }
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+
+
+        say(string) {
+            document.write(string);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(String) {
+            this.name = name;
+        }
+
+        getWeightHuman() {
+            return this.weight;
+        }
+
+        setWeight() {
+            this.weight = weight;
+        }
+
+        eatApple(apple) {
+            if (apple.getWeightApple() > 0) {
+                apple.decrease();
+                this.weight++;
+            } else {
+                document.write('No Apple');
+            }
+        }
+
+    }
+
+    let adam = new Human('Adam', 1, 70);
+    let eva = new Human('Eva', 2, 50);
+    let apple = new Apple(10);
+    while (apple.isEmpty() != true) {
+        document.write(adam.getName() +' eat apple' + '<br>');
+        adam.eatApple(apple);
+        document.write('Apple still : ' + apple.getWeightApple() + ' unit' + '<br>');
+        document.write('Weight of Adam : ' + adam.getWeightHuman() + ' unit' + '<br>');
+        document.write('<br>');
+        document.write(eva.getName() + ' eat apple' + '<br>');
+        eva.eatApple(apple);
+        document.write('Apple still : ' + apple.getWeightApple() + ' unit' + '<br>');
+        document.write('Weight of Eva : ' + eva.getWeightHuman() + ' unit' + '<br>');
+        document.write('<br>');
+    }
+</script>
+</html>
