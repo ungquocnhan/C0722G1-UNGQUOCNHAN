@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputNumber = prompt('Nhập số :');
+    let splitInputNumber = inputNumber.split('');
+    let index = [];
+    let characters = [];
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let words = ['Không', 'Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín'];
+    for (let i = 0; i < splitInputNumber.length; i++) {
+        for (let j = 0; j < numbers.length; j++) {
+            if (splitInputNumber[i] == numbers[j]) {
+        //         document.write(words[j]);
+        //     }
+        // }
+        //
+        //     }
+        //
+                index.push(j);
+            }
+        }
+    }
+    for (let i = 0; i < index.length; i++) {
+        for (let j = 0; j < words.length; j++) {
+            if (index[i] == j) {
+                characters.push(words[j]);
+            }
+        }
+    }
+    document.write('Số đó là : ' + characters.join(''));
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrayA = [7, 2, 5, 3, 5, 3];
+    let arrayB = [7, 2, 5, 4, 6, 3, 5, 3];
+    let missingValue = [];
+    for (let i = 0; i < arrayB.length ; i++) {
+        if(arrayA.indexOf(arrayB[i]) == -1){
+            missingValue.push((arrayB[i]));
+        }
+    }
+    document.write(missingValue);
+</script>
+</html>

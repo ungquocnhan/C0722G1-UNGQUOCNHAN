@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputAmount = 0;
+    let price = 0;
+    let sumPrice = 0;
+    let sum = [];
+    let menu;
+    do {
+        menu = +prompt('1.Cafe \n' +
+            '2.Cam vắt \n' +
+            '3.Nước ép cà rốt \n' +
+            '4.Nước ép cà chua \n' +
+            '5.Nước lọc \n' +
+            '6.Nước dừa \n' +
+            '7.Thoát gọi món');
+
+        switch (menu) {
+            case 1:
+                price = 14000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 2:
+                price = 15000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 3:
+                price = 17000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 4:
+                price = 16000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 5:
+                price = 10000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 6:
+                price = 20000;
+                alert('Giá tiền : ' + price + ' đồng');
+                inputAmount = +prompt('Nhập số lượng đồ uống :');
+                sum.push(price * inputAmount);
+                break;
+            case 7:
+                for (let i = 0; i < sum.length; i++) {
+                    sumPrice += sum[i];
+                }
+                alert('Hóa đơn tổng :' + sumPrice + ' đồng');
+                break;
+        }
+    } while (menu < 7);
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let wage = parseFloat(prompt('Nhập lương nhân viên (triệu) :'));
+    let salaryReceived;
+    if(wage == 15){
+        salaryReceived = 15 - 15 * 20 /100;
+        document.write('Lương nhận được : ' + salaryReceived + ' triệu');
+    }else if(wage >= 7){
+        salaryReceived = wage - wage * 10 /100;
+        document.write('Lương nhận được : ' + salaryReceived + ' triệu');
+    }else {
+        salaryReceived = wage - wage * 5 /100;
+        document.write('Lương nhận được : ' + salaryReceived + ' triệu');
+    }
+</script>
+</html>
