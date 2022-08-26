@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Xổ số</h2>
+<body>
+<input type="text" id="number1">
+<input type="text" id="number2">
+<input type="text" id="number3">
+<input type="text" id="number4">
+<input type="text" id="number5">
+<input type="text" id="number6"><br>
+<input type="text" id="random1">
+<input type="text" id="random2">
+<input type="text" id="random3">
+<input type="text" id="random4">
+<input type="text" id="random5">
+<input type="text" id="random6"><br>
+<input type="button" onclick="buyTicket()" value="Mua vé">
+<input type="button" onclick="resultTicket()" value="Xem kết quả">
+<p id="display"></p>
+</body>
+<script>
+    class Ticket {
+        constructor(number1, number2, number3, number4, number5, number6) {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4;
+            this.number5 = number5;
+            this.number6 = number6;
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setNumber1(number1) {
+            this.number1 = number1;
+        }
+
+        setNumber2(number2) {
+            this.number2 = number2;
+        }
+
+        setNumber3(number3) {
+            this.number3 = number3;
+        }
+
+        setNumber4(number4) {
+            this.number4 = number4;
+        }
+
+        setNumber5(number5) {
+            this.number5 = number5;
+        }
+
+        setNumber6(number6) {
+            this.number6 = number6;
+        }
+    }
+
+    let choice = +prompt('Bạn có 2 lựa chọn : \n' +
+        '1. Bạn muốn tự chọn số. \n' +
+        '2. Hệ thống tự random.')
+
+    switch (choice) {
+        case 1:
+            buyTicket();
+            break;
+        case 2:
+            randomTicket();
+            break;
+    }
+
+    function buyTicket() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        let number3 = document.getElementById("number3").value;
+        let number4 = document.getElementById("number4").value;
+        let number5 = document.getElementById("number5").value;
+        let number6 = document.getElementById("number6").value;
+        let number=[];
+        number.push(number1,number2,number3,number4,number5,number6);
+        return number;
+    }
+
+    function resultTicket() {
+        let check1 = Math.floor(Math.random() * 1);
+        let check2 = Math.floor(Math.random() * 1);
+        let check3 = Math.floor(Math.random() * 1);
+        let check4 = Math.floor(Math.random() * 1);
+        let check5 = Math.floor(Math.random() * 1);
+        let check6 = Math.floor(Math.random() * 2);
+        document.getElementById('random1').value = check1;
+        document.getElementById('random2').value = check2;
+        document.getElementById('random3').value = check3;
+        document.getElementById('random4').value = check4;
+        document.getElementById('random5').value = check5;
+        document.getElementById('random6').value = check6;
+        let check=[];
+        check.push(check1,check2,check3,check4,check5,check6);
+        let resultCount = 0;
+        for (let i = 0; i < check.length; i++) {
+            for (let j = 0; j < buyTicket().length; j++) {
+                if (i == j && check[i] == buyTicket()[j]) {
+                    resultCount++;
+                }
+            }
+        }
+        for (let i = 0; i < check.length; i++) {
+            for (let j = 0; j < randomTicket().length; j++) {
+                if (i == j && check[i] == randomTicket()[j]) {
+                    resultCount++;
+                }
+            }
+        }
+
+        switch (resultCount) {
+            case 6:
+                alert('Ban đã trúng giải nhất.');
+                break;
+            case 5:
+                alert('Ban đã trúng giải nhì.');
+                break;
+            case 4:
+                alert('Bạn đã trúng giải khuyến khích.');
+                break;
+            case 0:
+                alert('Chúc bạn may mắn lần sau.');
+                break;
+            case 1:
+            case 2:
+            case 3:
+                alert('Chúc bạn may mắn lần sau.');
+                break;
+        }
+    }
+
+    function randomTicket() {
+        let random1 = Math.floor(Math.random() * 1);
+        let random2 = Math.floor(Math.random() * 1);
+        let random3 = Math.floor(Math.random() * 1);
+        let random4 = Math.floor(Math.random() * 1);
+        let random5 = Math.floor(Math.random() * 1);
+        let random6 = Math.floor(Math.random() * 1);
+        document.getElementById("number1").value = random1;
+        document.getElementById("number2").value = random2;
+        document.getElementById("number3").value = random3;
+        document.getElementById("number4").value = random4;
+        document.getElementById("number5").value = random5;
+        document.getElementById("number6").value = random6;
+        let random=[];
+        random.push(random1, random2, random3, random4, random5, random6);
+        return random;
+    }
+</script>
+</html>

@@ -15,26 +15,11 @@
     let s = 'cabcabssdt';
     let arrayS = s.split('');
     let arr1 = [arrayS[0]];
-    for (let i = 0; i < arrayS.length ; i++) {
-        if(!arr1.includes(arrayS[i])){
+    for (let i = 0; i < arrayS.length; i++) {
+        if (!arr1.includes(arrayS[i])) {
             arr1.push(arrayS[i]);
         }
     }
-   // let arr2 = [];
-    // for (let i = 0; i < arrayS.length - 1; i++) {
-    //     for (let j = i + 1; j < arrayS.length; j++) {
-    //         if (arrayS[i] == arrayS[j]) {
-    //             arr1.push(arrayS[i]);
-    //         }
-    //     }
-    // }
-    // for (let i = 0; i < s.length; i++) {
-    //     if (!arr1.includes(arrayS[i])) {
-    //         alert(arrayS[i])
-    //         arr1.push(arrayS[i]);
-    //     }
-    // }
-    // arr1.push(arr2);
     document.write('Có ' + arr1.length + ' kí tự khác nhau là ' + arr1);
 
 </script>
