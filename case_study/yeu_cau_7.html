@@ -4,28 +4,101 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .container_swap{
-            width: 400px;
+        .container_swap {
+            width: 1400px;
         }
-        .div_left{
-            width: 0px;
+
+        .div_left {
+            width: 100px;
             float: left;
             text-align: center;
+            background-color: orange;
         }
-        .div_right{
-            width: 200px;
+
+        .div_right {
+            width: 1300px;
             float: left;
             text-align: center;
+            font-size: 50px;
+            color: blue;
+            background-color: greenyellow;
+        }
+
+        td {
+            height: 70px;
+            padding-left: 40px;
+        }
+        table{
+            border-right: 2px solid blue;
+            padding-right: 40px;
         }
     </style>
-
 </head>
 
 
 <body>
 <div class="container_swap">
-    <div class="div_left">G</div>
+    <div class="div_left"><img
+            src="data:image/png;base64,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"
+            height="53" width="53" alt="No Image"></div>
     <div class="div_right">Hệ thống quản lý bài tập Casestudy module 1</div>
 </div>
+<hr style="border-bottom: 2px solid blue;">
+<form>
+    <table>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 1</option>
+                <option>Bài 1</option>
+                <option>Bài 2</option>
+                <option>Bài 3</option>
+                <option>Bài 4</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 2</option>
+                <option>Bài 1</option>
+                <option>Bài 2</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 3</option>
+                <option>Bài 1</option>
+                <option>Bài 2</option>
+                <option>Bài 3</option>
+                <option>Bài 4</option>
+                <option>Bài 5</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 4</option>
+                <option>Bài 1</option>
+                <option>Bài 2</option>
+                <option>Bài 3</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 5</option>
+                <option>Bài 1</option>
+                <option>Bài 2</option>
+                <option>Bài 3</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 6</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><select>
+                <option>Yêu cầu 7</option>
+            </select></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
