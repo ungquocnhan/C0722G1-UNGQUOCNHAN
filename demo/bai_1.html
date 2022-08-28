@@ -15,7 +15,9 @@ Hiển thị ra màn hình danh sách các phần tử của mảng, hiện th�
     let inputLength = prompt('Nhập độ dài mảng số nguyên (n <= 50):');
     let arr = [];
     for (let i = 0; i < inputLength; i++) {
-        arr[i] = +prompt('Nhập phần tử của mảng' + i);
+        if (inputLength <= 50) {
+            arr[i] = +prompt('Nhập phần tử của mảng' + i);
+        }
     }
     document.write(arr + '<br>');
     let count = 0;
