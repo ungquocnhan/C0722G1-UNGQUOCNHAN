@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//sort(): sắp xếp mảng tăng dần-->
+<!--//sort(function(a, b){return a-b}): sắp xếp số tăng dần-->
+<!--//sort(function(a, b){return b-a}): sắp xếp số giảm dần-->
+<!--//include(): true nếu giá trị được tìm thấy, ngược lại là false-->
+<!--//indexof(); Chỉ số của phần tử tìm thấy.-1 nếu không tìm thấy.-->
+<!--//\w:tìm kiếm từ-->
+<!--//\W:tìm kiếm ký tự đặc biệt-->
+<!--//\d:tìm kiếm số-->
+<!--//\D:tìm kiếm không phải số-->
+
+<!--// function isSoChinhPhuong(n) {-->
+<!--if (n < 0) {-->
+<!--return false-->
+<!--}-->
+<!--// Math.floor() là hàm làm tròn xuống trong JS-->
+<!--// Math.sqrt() là hàm lấy số căn bậc hai-->
+<!--const canBacHai = Math.floor(Math.sqrt(n))-->
+<!--return canBacHai * canBacHai == n-->
+<!--}-->
+</body>
+<script>
+    let lengthArr = +prompt('nhập vào n');
+    let arr = [];
+    for (let i = 0; i < lengthArr ; i++) {
+        arr[i] = prompt('nhập vào phần tử mảng');
+    }
+    document.write(arr);
+    arr.sort();
+    document.write(arr);
+    document.write('số lớn nhất' + arr[arr.length - 1]);
+    document.write('số nhỏ nhất' + arr[0]);
+</script>
+</html>

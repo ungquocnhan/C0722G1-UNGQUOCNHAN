@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // : Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong mảng(số này đã làm bài tập ở jame).
+    // Hàm trả về 1 mảng số fibonaci được tìm thấy trong mảng ( Yêu cầu sắp xếp tăng dần).
+    // Gợi ý đây là dãy số fibonaci: 0,1,1,2,3,5,8,13,21,…..
+    // Ví dụ :
+    //     Số đầu vào	Kết quả
+    //     [1,5,6,13,9,12,8,0,5,1]	[0,1,1,5,5,8,13]
+
+    function findFibonacciInArray(array) {
+        let array1 = [];
+        let fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+        for (let i = 0; i < array.length; i++) {
+            if (fibonacci.includes(array[i])) {
+                array1.push(array[i]);
+            }
+        }
+        // return array1.sort(function (a, b) {
+        //     return a - b;
+        // });
+        let increase;
+        for (let i = 0; i < array1.length - 1; i++) {
+            for (let j = i + 1; j < array1.length; j++) {
+                if (array1[i] > array1[j]) {
+                    increase = array1[i];
+                    array1[i] = array1[j];
+                    array1[j] = increase;
+                }
+            }
+        }
+        return array1;
+    }
+
+    let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+    document.write(findFibonacciInArray(arr));
+</script>
+</html>

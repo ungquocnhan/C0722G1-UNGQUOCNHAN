@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maMay" placeholder="mã máy">
+<input type="text" id="tenMay" placeholder="tên máy">
+<input type="text" id="tenHang" placeholder="tên hãng">
+<input type="text" id="giaBan" placeholder="giá bán">
+<input type="button" onclick="themMoiMayTinh()" value="Thêm mới">
+
+<p id="display"></p>
+</body>
+<!--Tạo một lớp Máy tính  có:-->
+<!-- - Thuộc tính:-->
+<!--+ Mã máy (string)-->
+<!--+ Tên máy(string)-->
+<!--+ Tên Hãng sản xuất (string)-->
+<!--+ Giá bán (number).-->
+<!-- - Các phương thức getter và setter cho các thuộc tính-->
+<!-- - Phương thức  toString() : phương thức lấy các thông tin của đối tượng.-->
+<!-- -Yêu cầu: Viết chương trình quản lý  Máy tính    với các chức năng sau;-->
+<!--+ Thêm mới 1 máy tính-->
+<!--+ Hiển thị được danh sách máy tính-->
+
+<script>
+    class MayTinh {
+        constructor(maMay, tenMay, tenHang, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.giaBan = giaBan;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        setMaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        setTenHang(tenHang) {
+            this.tenHang = tenHang;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+
+        setGiaBan(giaBan) {
+            this.giaBan = giaBan;
+        }
+
+        toString() {
+            return maMay + '-' + tenMay + '-' + tenHang + '-' + giaBan;
+        }
+
+    }
+
+    let mayTinh1 = new MayTinh(1, 'Asus ROG', 'Asus', 20);
+    let mayTinh2 = new MayTinh(2, 'Acer Nitro', 'Acer', 19);
+    let mayTinh3 = new MayTinh(3, 'Dell Inspiron', 'Dell', 17);
+    let mayTinhList = [mayTinh1, mayTinh2, mayTinh3];
+    display(mayTinhList);
+
+    function display(list) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã Máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Tên Hãng</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getMaMay() + '</td>\n' +
+                '        <td>' + list[i].getTenMay() + '</td>\n' +
+                '        <td>' + list[i].getTenHang() + '</td>\n' +
+                '        <td>' + list[i].getGiaBan() + '</td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function themMoiMayTinh() {
+        let maMay = document.getElementById("maMay").value;
+        let tenMay = document.getElementById("tenMay").value;
+        let tenHang = document.getElementById("tenHang").value;
+        let giaBan = document.getElementById("giaBan").value;
+        let mayTinhMoi = new MayTinh(maMay, tenMay, tenHang, giaBan);
+        mayTinhList.push(mayTinhMoi);
+        display(mayTinhList);
+        document.getElementById("maMay").value = '';
+        document.getElementById("tenMay").value = '';
+        document.getElementById("tenHang").value = '';
+        document.getElementById("giaBan").value = '';
+    }
+</script>
+</html>
