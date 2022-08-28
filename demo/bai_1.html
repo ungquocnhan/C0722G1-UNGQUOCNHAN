@@ -12,12 +12,14 @@ Hiển thị ra màn hình danh sách các phần tử của mảng, hiện th�
  của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)-->
 <!--Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10-->
 <script>
-    let inputLength = prompt('Nhập độ dài mảng số nguyên (n <= 50):');
+    let inputLength = prompt('Nhập độ dài mảng số nguyên n:');
     let arr = [];
-    for (let i = 0; i < inputLength; i++) {
-        if (inputLength <= 50) {
+    if (inputLength <= 50) {
+        for (let i = 0; i < inputLength; i++) {
             arr[i] = +prompt('Nhập phần tử của mảng' + i);
         }
+    } else {
+        alert('Nhập lại n');
     }
     document.write(arr + '<br>');
     let count = 0;
